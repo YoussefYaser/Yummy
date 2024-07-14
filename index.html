@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yummy</title>
+
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+
+    <!-- start font awesome -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- end font awesome -->
+
+    <!-- start bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- end bootstrap -->
+
+    <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body>
+
+    <div class="page bg-black min-vh-100">
+        <!-- start categories -->
+        <section class="categories py-4 d-none">
+            <h2 class="text-white h1 text-capitalize mx-auto w-fit mb-5">categories</h2>
+            <div class="container">
+                <div class="row g-4">
+
+                </div>
+            </div>
+        </section>
+        <!-- end categories -->
+
+        <!-- start area -->
+        <section class="area bg-black text-white position-fixed top-0 start-0 w-100 h-100 py-4 overflow-auto d-none">
+            <div class="container">
+                <h2 class="text-white h1 text-capitalize mx-auto w-fit mb-5">area</h2>
+                <div class="row g-4">
+
+                </div>
+            </div>
+        </section>
+        <!-- end area -->
+
+        <!-- start ingredients -->
+        <section class="ingredients bg-black text-white position-fixed top-0 start-0 w-100 h-100 py-4 overflow-auto d-none">
+            <div class="container">
+                <h2 class="text-white h1 text-capitalize mx-auto w-fit mb-5">ingredients</h2>
+                <div class="row">
+
+                </div>
+            </div>
+        </section>
+        <!-- end ingredients -->
+
+        <!-- start meal -->
+        <section class="meals bg-black position-fixed top-0 start-0 w-100 h-100 py-4 d-block overflow-auto">
+            <div class="container">
+
+                <form class="search text-capitalize mb-5 d-none">
+                    <div class="row g-3">
+                        <div class="col-lg-6">
+                            <div class="form-floating">
+                                <input type="text" class="by-name form-control border border-1 border-white text-white"
+                                    id="floatingInputName" placeholder="name@example.com">
+                                <label for="floatingInputName" class="text-white">search by name</label>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-floating">
+                                <input type="text"
+                                    class="by-letter form-control border border-1 border-white text-white"
+                                    id="floatingInputFletter" placeholder="name@example.com" maxlength="1">
+                                <label for="floatingInputFletter" class="text-white">search by first letter</label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <span class="back d-flex justify-content-end w-fit ms-auto mb-4 fs-4 p-2 text-white"
+                    style=" width: 60px;">
+                    <i class="arrow fa-solid fa-arrow-left"></i>
+                </span>
+                <div class="row g-4">
+                    <div class="animation bg-black position-fixed top-0 start-0 m-0 w-100 h-100 xy-center">
+                        <span class="text-white">
+                            <i class="fa-solid fa-spinner fa-spin"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="contact-us d-none vh-100 d-flex justify-content-center align-items-center">
+                    <form class="row m-0 g-3" >
+                        <div class="col-lg-6">
+                            <input autocomplete="off" type="text" class="form-control" placeholder="Enter Your Name"
+                                name="name" id="name">
+                        </div>
+                        <div class="col-lg-6">
+                            <input autocomplete="off" type="email" class="form-control" placeholder="Enter Your Email"
+                                name="email" id="email">
+                        </div>
+                        <div class="col-lg-6">
+                            <input autocomplete="off" type="tel" class="form-control" placeholder="Enter Your Phone"
+                                name="phone" id="phone">
+                        </div>
+                        <div class="col-lg-6">
+                            <input autocomplete="off" type="number" class="form-control" placeholder="Enter Your Age"
+                                min="1" name="age" id="age">
+                        </div>
+                        <div class="col-lg-6">
+                            <input autocomplete="off" type="password" class="form-control"
+                                placeholder="Enter Your Password" name="password" id="password">
+                        </div>
+                        <div class="col-lg-6">
+                            <input autocomplete="off" type="password" class="form-control" placeholder="Repassword"
+                                name="repassword" id="repassword">
+                        </div>
+                        <button class="btn btn-outline-warning d-block w-fit mx-auto" id="submit"
+                            disabled>Sumbit</button>
+                        <div class="border border-1 p-3 rounded text-white mt-4">
+                            <ul>
+                                <li>The name must be less than 30 charset.</li>
+                                <li>The email must be in the form example@example.com</li>
+                                <li>The age must be more than 12 years.</li>
+                                <li>The password must start with capital letter and has at least 8 digit with three
+                                    numbers.</li>
+                            </ul>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!-- end meal -->
+
+        <!-- start details -->
+        <section class="details bg-black position-fixed top-0 start-0 w-100 h-100 py-5 overflow-auto d-none">
+            <div class="container">
+                <span class="back d-flex justify-content-end w-fit ms-auto mb-4 fs-4 p-2 text-white"
+                    style=" width: 60px;">
+                    <i class="arrow fa-solid fa-arrow-left"></i>
+                </span>
+                <div class="row position-relative">
+
+                </div>
+            </div>
+        </section>
+        <!-- end details -->
+
+        <!-- start aside -->
+        <aside class="d-flex position-fixed top-0 start-0 h-100 bg-black">
+            <div class="collapsed">
+                <div class="box h-100 d-flex flex-column justify-content-between">
+                    <ul class="list-unstyled text-capitalize px-3 py-4 text-nowrap overflow-hidden close text-white">
+                        <li class="mb-3 position-relative">search</li>
+                        <li class="mb-3 position-relative">categories</li>
+                        <li class="mb-3 position-relative">area</li>
+                        <li class="mb-3 position-relative">ingredients</li>
+                        <li class="mb-3 position-relative">contact us</li>
+                    </ul>
+                    <div class="px-3 py-4 text-white overflow-hidden links">
+                        <div class="d-flex align-items-center ">
+                            <span class="me-1">
+                                <i class="fa-brands fa-facebook"></i>
+                            </span>
+                            <span class="me-1">
+                                <i class="fa-brands fa-square-x-twitter"></i>
+                            </span>
+                            <span class="me-1">
+                                <i class="fa-solid fa-globe "></i>
+                            </span>
+                        </div>
+                        <p class="m-0 text-nowrap">Copyright Youssef Yasser
+                            <br>© 2024 All
+                            Rights
+                            <br>Reserved.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="logo d-flex flex-column justify-content-between align-items-center bg-white px-2 py-4">
+                <img src="images/logo.png" alt="yummy logo" style="width: 50px;">
+                <span id="aside-bar">
+                    <button id="humburger-toggler" class="navbar-toggler collapsed bg-danger" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <div id="humburger-bar" class="d-flex flex-column justify-content-center position-relative">
+                            <span class="bar-top position-absolute rounded"></span>
+                            <span class="bar-middle rounded"></span>
+                            <span class="bar-bottom position-absolute rounded"></span>
+                        </div>
+                    </button>
+                </span>
+                <span class="d-flex flex-column">
+                    <i class="fa-solid fa-globe mb-1"></i>
+                    <i class="fa-solid fa-share-nodes"></i>
+                </span>
+            </div>
+        </aside>
+        <!-- end aside -->
+
+    </div>
+
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+
+</body>
+
+</html>

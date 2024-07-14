@@ -1,0 +1,283 @@
+.page .meals .search, 
+.page .categories .container > .row,
+.page .meals .container > .row,
+.page .details .container > .row,
+.page .meals .contact-us,
+.page .area .container > .row,
+.page .ingredients .container > .row{
+    margin-left: 66px;
+}
+
+*::selection{
+    background-color: #fdd21096;
+    color: black;
+}
+
+/* START CUSTOM CLASSES */
+
+.w-fit{
+    width: fit-content;
+}
+
+.no-decoration{
+    text-decoration: none;
+}
+
+.xy-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.animation{
+    z-index: 9999;
+    font-size: 60px;
+    transition: 0.5s;
+}
+
+.page .back{
+    cursor: pointer;    
+}
+
+.page .back:hover .arrow{
+    animation-name: arrow-left;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes arrow-left{
+    100%{
+        transform: translateX(-20px);
+    }
+}
+
+/* END  CUSTOM CLASSES */
+
+/* START CATEGORIES */
+
+.page .categories .container > .row .inner{
+    display: none;
+}
+
+.page .categories .container > .row .inner .description,
+.page .meals .container > .row .inner .description{
+    top: 100%;
+    transition: 0.5s;
+}
+
+.page .categories .container > .row .inner:hover .description,
+.page .meals .container > .row .inner:hover .description{
+    top: 0%;
+    cursor: pointer;
+}
+
+/* END CATEGORIES */
+
+/* START MEALS */
+
+/* start search */
+.page .meals .search .form-control{
+    background-color: transparent;
+}
+
+.page .meals .search .form-control:focus{
+    box-shadow: 0 0 0 .25rem #fdd21096;
+}
+
+.page .meals .search .form-control:focus + label{
+    color: rgb(207, 207, 207) !important;
+}
+
+.page .meals .search .form-floating>.form-control:focus~label::after,
+.page .meals .search .form-floating>.form-control ~ label::after{
+    background-color: transparent;
+}
+
+/* end search */
+
+.page .meals{
+    z-index: 999;
+}
+
+.page .meals .inner{
+    display: none;
+}
+
+/* start contact us */
+
+.page .meals .contact-us input:focus{
+    box-shadow: 0 0 0 .25rem #fdd21096;
+}
+
+/* end contact us */
+
+/* END MEALS */
+
+/* START DETAILS */
+
+.page .details{
+    z-index: 9999;
+}
+
+.page .details .row{
+    opacity: 0;
+    top: 100px;
+}
+
+/* END DETAILS */
+
+/* START AREA */
+
+.page .area .row .inner{
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.page .area .row .inner:hover{
+    transform: scale(1.2);
+}
+
+/* END AREA */
+
+/* START INGREDIENTS*/
+
+.page .ingredients .row .inner{
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.page .ingredients .row .inner:hover{
+    transform: scale(1.1);
+}
+
+/* END INGREDIENTS */
+
+/* START ASIDE */
+
+.page aside{
+    z-index: 99999;
+}
+
+.page aside > div:nth-child(1){
+    width: 200px;
+    display: none;
+}
+
+.page aside span, 
+.page aside ul li{
+    cursor: pointer;
+}
+
+.page aside ul li{
+    top: 200px;
+    transition: padding-left 0.3s, color 0.3s;
+}
+
+.page aside ul li:hover{
+    padding-left: 10px;
+    color: #fff700cc;
+}
+
+.navbar-toggler div{
+    --toggler-width: 1.5625rem;  /*25px*/
+    --toggler-height: var(--toggler-width);
+    --toggler-bg: #ffff;
+    --bar-transition: 0.3s;
+    --bar-height: 0.125rem;  /*2px*/
+    /* ----------------------------------------------- */
+    width: var(--toggler-width);
+    height: var(--toggler-height);
+    background-color: var(--toggler-bg);
+}
+
+
+.navbar-toggler div span, 
+.navbar-toggler.collapsed div span{
+    width: 100%;
+    border: var(--bar-height) solid black;
+    transition:  var(--bar-transition);
+    left: 0;
+}
+
+.navbar-toggler.collapsed div span.bar-middle{
+    opacity: 1;
+}
+
+.navbar-toggler div .bar-middle{
+    opacity: 0;
+} 
+
+
+.navbar-toggler div .bar-top{
+    top: 0;
+    transform: translateY(0%) rotate(0deg);
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes bar-top-forward{
+    50%{
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    100%{
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
+    }
+}
+
+@keyframes bar-top-backward{
+    0%{
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
+    }
+
+    50%{
+        top: 50%;
+        transform: translateY(-50%) rotate(0deg);
+    }
+
+    100%{
+        top: 0%;
+        transform: translateY(0%) rotate(0deg);
+    }
+}
+
+.navbar-toggler div .bar-bottom{
+    bottom: 0;
+    transform: translateY(0%) rotate(0deg);
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes bar-bottom-forward{
+    50%{
+        bottom: 50%;
+        transform: translateY(50%);
+    }
+
+    100%{
+        bottom: 50%;
+        transform: translateY(50%) rotate(-45deg);
+    }
+}
+
+@keyframes bar-bottom-backward{
+    0%{
+        bottom: 50%;
+        transform: translateY(50%) rotate(-45deg);
+    }
+
+    50%{
+        bottom: 50%;
+        transform: translateY(50%) rotate(0deg);
+    }
+
+    100%{
+        bottom: 0%;
+        transform: translateY(0%) rotate(0deg);
+    }
+}
+
+/* END ASIDE */
